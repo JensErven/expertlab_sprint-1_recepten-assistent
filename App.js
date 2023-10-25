@@ -1,21 +1,36 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { useState, useEffect } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import RecipeDetailsScreen from "./screens/RecipeDetailsScreen";
+import Navigator from "./components/shared/Navigator";
+import { StyleSheet, Text, View, TextInput, FlatList } from "react-native";
+const Stack = createStackNavigator();
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Hallo</Text>
-
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <View style={styles.background}>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Navigator"
+            component={Navigator}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="RecipeDetailsScreen"
+            component={RecipeDetailsScreen}
+          />
+        </Stack.Navigator>
+      </View>
+    </NavigationContainer>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+  background: {
+    flex: 1, // Make the background fill the entire screen
+    backgroundColor: "#ffffff", // Replace with your desired background color
   },
 });
+export default App;

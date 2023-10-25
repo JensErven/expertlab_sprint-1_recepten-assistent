@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Spaghetti Carbonara",
+    "instructions": "Cook spaghetti, fry bacon..."
+  },
+  {
+    "id": 2,
+    "name": "Macaroni",
+    "instructions": "Cook the macaroni, fry bacon..."
+  },
+  {
+    "id": 3,
+    "name": "Macaroni",
+    "instructions": "Cook the macaroni, fry bacon..."
+  },
+  {
+    "id": 4,
+    "name": "Macaroni",
+    "instructions": "Cook the macaroni, fry bacon..."
+  }
+]
